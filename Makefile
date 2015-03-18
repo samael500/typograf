@@ -12,3 +12,7 @@ pyflakes:
 lint:
 	make pep8
 	make pyflakes
+
+make ci_test:
+	nosetests --with-specplugin tests/
+	make lint
