@@ -27,7 +27,7 @@ SOAPAction: "http://typograf.artlebedev.ru/webservices/ProcessText"
 {content}
 '''
 
-    def __init__(self, encoding='UTF-8', *, br=True, p=True, nobr=3, entityType=4, timeout=10):
+    def __init__(self, encoding='UTF-8', *, br=False, p=False, nobr=3, entityType=4, timeout=10):
         """
         :param encoding: - string
         :param br: - bool, use or not <br> tags
@@ -104,6 +104,8 @@ SOAPAction: "http://typograf.artlebedev.ru/webservices/ProcessText"
 
     def process_text(self, text):
         """ send request with given text and get result """
+        # escape base char
+        text = text.replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;')
         # make xml request body
         soap_body = self.__create_xml_request(text)
         # make total request
@@ -131,7 +133,9 @@ SOAPAction: "http://typograf.artlebedev.ru/webservices/ProcessText"
             response = response.decode()
 
         # parse response
-        return self.__parse_xml_response(response)
+        text_result = self.__parse_xml_response(response)
+        # back replace and return
+        return text_result.replace('&amp;', '&').replace('&lt;', '<').replace('&gt;', '>')
 
     def try_process_text(self, text):
         """ safe process text if error - return not modifyed text """
