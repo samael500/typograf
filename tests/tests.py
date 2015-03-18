@@ -1,3 +1,5 @@
+# -*- encoding: utf-8 -*-
+
 from unittest import TestCase
 import socket
 
@@ -77,7 +79,7 @@ class TypografTestCase(TestCase):
 
     def test_example_str(self):
         text = u'"Вы все еще кое-как верстаете в "Ворде"? - Тогда мы идем к вам!"'
-        res_text = '''<p>&laquo;Вы&nbsp;все еще кое-как верстаете в&nbsp;&bdquo;Ворде&ldquo;? &mdash;&nbsp;\
+        res_text = u'''<p>&laquo;Вы&nbsp;все еще кое-как верстаете в&nbsp;&bdquo;Ворде&ldquo;? &mdash;&nbsp;\
 Тогда мы&nbsp;идем к&nbsp;вам!&raquo;<br />
 </p>'''
         typograf = self.RemoteTypograf(p=True, br=True)

@@ -27,7 +27,7 @@ SOAPAction: "http://typograf.artlebedev.ru/webservices/ProcessText"
 {content}
 '''
 
-    def __init__(self, encoding='UTF-8', *, br=False, p=False, nobr=3, entityType=4, timeout=10):
+    def __init__(self, encoding='UTF-8', br=False, p=False, nobr=3, entityType=4, timeout=10):
         """
         :param encoding: - string
         :param br: - bool, use or not <br> tags
