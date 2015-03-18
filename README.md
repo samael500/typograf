@@ -1,4 +1,6 @@
 # Typograf
+[![Build Status](https://travis-ci.org/Samael500/typograf.svg?branch=master)](#)
+
 client for artlebedev typograf webservice
 
 <p>&laquo;Вы&nbsp;все еще кое-как верстаете в&nbsp;&bdquo;Ворде&ldquo;? &mdash;&nbsp;Тогда мы&nbsp;идем к&nbsp;вам!&raquo;<br />
