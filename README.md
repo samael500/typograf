@@ -1,5 +1,5 @@
 # Typograf
-[![Build Status](https://travis-ci.org/Samael500/typograf.svg?branch=master)](#)
+[![Build Status](https://travis-ci.org/Samael500/typograf.svg?branch=master)](https://travis-ci.org/Samael500/typograf)
 
 client for artlebedev typograf webservice
 
