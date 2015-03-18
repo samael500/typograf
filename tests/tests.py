@@ -9,7 +9,7 @@ class TypografTestCase(TestCase):
     """ Test typograf class """
 
     test_text = '<<simple>> -- "Text" -- t test t'
-    result_text = '<<simple>>&nbsp;&#151; &laquo;Text&raquo;&nbsp;&#151; t&nbsp;test&nbsp;t\n'
+    result_text = '<<simple>>&nbsp;&mdash; &laquo;Text&raquo;&nbsp;&mdash; t&nbsp;test&nbsp;t\n'
 
     @classmethod
     def setUpClass(cls):
