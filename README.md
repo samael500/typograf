@@ -10,14 +10,11 @@ Python2 not Unicode
 ================
 ```python
 # -*- encoding: windows-1251 -*-
-from RemoteTypograf import RemoteTypograf
+from typograf import RemoteTypograf
 
-rt = RemoteTypograf('windows-1251')
+rt = RemoteTypograf('windows-1251', p=True, br=True)
+rt.html_entities()
 
-rt.htmlEntities()
-rt.br(1)
-rt.p(1)
-rt.nobr(3)
 print rt.processText(u'"Âû âñå åùå êîå-êàê âåðñòàåòå â "Âîðäå"? - Òîãäà ìû èäåì ê âàì!"')
 ```
 
@@ -30,14 +27,11 @@ Python2 Unicode
 =============
 ```python
 # -*- encoding: utf-8 -*-
-from RemoteTypograf import RemoteTypograf
+from typograf import RemoteTypograf
 
-rt = RemoteTypograf() # UTF-8
+rt = RemoteTypograf(p=True, br=True) # UTF-8
+rt.html_entities()
 
-rt.htmlEntities()
-rt.br(1)
-rt.p(1)
-rt.nobr(3)
 print rt.processText(u'"Вы все еще кое-как верстаете в "Ворде"? - Тогда мы идем к вам!"')
 ```
 
@@ -49,14 +43,11 @@ print rt.processText(u'"Вы все еще кое-как верстаете в "
 Python3
 ======
 ```python
-from RemoteTypograf import RemoteTypograf
+from typograf import RemoteTypograf
 
-rt = RemoteTypograf()
+rt = RemoteTypograf(p=True, br=True)
+rt.html_entities()
 
-rt.htmlEntities()
-rt.br(1)
-rt.p(1)
-rt.nobr(3)
 print(rt.processText('"Вы все еще кое-как верстаете в "Ворде"? - Тогда мы идем к вам!"'))
 ```
 

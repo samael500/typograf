@@ -74,3 +74,13 @@ class TypografTestCase(TestCase):
         # and again
         result = typograf.process_text(result)
         self.assertEquals(result, self.result_text)
+
+    def test_example_str(self):
+        text = u'"Вы все еще кое-как верстаете в "Ворде"? - Тогда мы идем к вам!"'
+        res_text = '''<p>&laquo;Вы&nbsp;все еще кое-как верстаете в&nbsp;&bdquo;Ворде&ldquo;? &mdash;&nbsp;\
+Тогда мы&nbsp;идем к&nbsp;вам!&raquo;<br />
+</p>'''
+        typograf = self.RemoteTypograf(p=True, br=True)
+        typograf.html_entities()
+        result = typograf.process_text(text)
+        self.assertEquals(result, res_text)
