@@ -31,7 +31,7 @@ class TypografTestCase(TestCase):
         """ Check correct errors if timeout """
         typograf = self.RemoteTypograf(timeout=1)
         # change host
-        typograf.HOST = '10.0.0.1'
+        typograf.HOST = '192.168.0.1'
         with self.assertRaises(socket.timeout):
             typograf.process_text(self.test_text)
         # not error if safe method

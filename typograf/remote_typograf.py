@@ -1,5 +1,6 @@
 # -*- encoding: utf-8 -*-
 
+import xml
 import xml.etree.cElementTree as ET
 import xml.dom.minidom
 
@@ -143,5 +144,5 @@ SOAPAction: "http://typograf.artlebedev.ru/webservices/ProcessText"
             return text
         try:
             return self.process_text(text)
-        except (socket.gaierror, socket.timeout):
+        except (socket.gaierror, socket.timeout, xml.parsers.expat.ExpatError):
             return text
