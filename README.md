@@ -1,6 +1,6 @@
 # Typograf
 [![Build Status](https://travis-ci.org/Samael500/typograf.svg?branch=master)](https://travis-ci.org/Samael500/typograf)
-[![Latest Version](https://pypip.in/version/typograf/badge.svg)](https://pypi.python.org/pypi/typograf/)
+[![Latest Version](https://img.shields.io/pypi/v/typograf.svg)](https://pypi.python.org/pypi/typograf/)
 
 client for artlebedev typograf webservice
 
